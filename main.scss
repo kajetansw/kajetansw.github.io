@@ -2,10 +2,19 @@ $media-limit: 1080px;
 
 html, body {
     margin: 0;
-    background: #F1F1F1; 
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     color: white;
+}
+
+#particles {
+    background: #212121;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+
+    // remove for background check
+    // z-index: -1;
 }
 
 section {
@@ -13,7 +22,7 @@ section {
 }
 
 #welcome {
-    background: #212121; 
+    background: transparent; 
     font-size: 2rem;
     position: relative;
 
@@ -30,15 +39,33 @@ section {
 
     #introduction {
         width: 50vw;
-        background-color: lightblue;
+        position: relative;
+        // background-color: lightblue;
     }
 
     #description {
         flex-grow: 1;
-        background-color: lightgreen;
+        position: relative;
+        // background-color: lightgreen;
     }
+}
+
+.card {
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #404d4e;
+    border-radius: 1rem;
 }
 
 .text--centered {
     text-align: center;
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
 }
