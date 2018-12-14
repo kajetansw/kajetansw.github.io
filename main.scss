@@ -1,3 +1,5 @@
+$media-limit: 1080px;
+
 html, body {
     margin: 0;
     background: #F1F1F1; 
@@ -6,16 +8,34 @@ html, body {
     color: white;
 }
 
-#introduction {
+section {
+    height: 100vh;
+}
+
+#welcome {
     background: #212121; 
     font-size: 2rem;
-    height: 100vh;
     position: relative;
 
     .owl-carousel {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+    }
+}
+
+#info {
+    display: flex;
+    background-color: white;
+
+    #introduction {
+        width: 50vw;
+        background-color: lightblue;
+    }
+
+    #description {
+        flex-grow: 1;
+        background-color: lightgreen;
     }
 }
 

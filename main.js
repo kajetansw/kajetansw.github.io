@@ -5,8 +5,8 @@ owl.owlCarousel({
    margin: 10,
    autoplay: true,
    autoplayTimeout: 3000,
-   autoplayHoverPause: true,
-   // check if transition time is configurable
+   smartSpeed: 800,
+   // autoplayHoverPause: true,
    center: true
 });
 $('.play').on('click', function () {
@@ -14,4 +14,7 @@ $('.play').on('click', function () {
 });
 $('.stop').on('click', function () {
    owl.trigger('stop.owl.autoplay')
+});
+
+particlesJS.load('particles', 'assets/particles-config.json', function () {
 });
