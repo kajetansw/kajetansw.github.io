@@ -38,13 +38,23 @@ section {
 
 #info {
     display: grid;
-    grid-template-columns: auto 40% auto 40% auto;
+    grid-template-columns: auto 35% auto 55% auto;
     grid-template-rows: auto;
  
     #introduction {
         grid-column: 2;
         grid-row: 1;
         // background-color: lightblue;
+
+        h1 { 
+            font-size: 2.2rem;
+        }
+        h4 {
+            font-size: 1.5rem;    
+        }
+        table {
+            margin-top: 1rem;
+        }
     }
 
     #description {
@@ -60,13 +70,8 @@ section {
     top: 50%;
     transform: translateY(-50%);
     padding: 1.5rem;
-    background-color: #404d4e;
-    opacity: .6;
+    background-color: rgba(#404d4e, 0.5);
     border-radius: 1rem;
-
-    & * {
-        opacity: 1;
-    }
 }
 
 ul.card__social-buttons {
@@ -74,21 +79,23 @@ ul.card__social-buttons {
     padding: 0;
     position: absolute;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
 
     li {
         display: inline-block;
-        padding: .5rem;
+        padding: 0 .5rem;
 
         a {
+            display: block;
             bottom: 0;
             color: #ffffff;
             background: transparent;
             border: none;
-            font-size: 2rem;
-            padding-top: .5rem;
-            padding-bottom: .5rem;
-            padding-left: .5rem;
-            padding-right: 1rem;
+            font-size: 1.5rem;
+            padding: .5rem 1.5rem;
             border-radius: 1rem;
             cursor: pointer;
             transition: all .2s ease;
@@ -96,17 +103,29 @@ ul.card__social-buttons {
     }
 }
 
+.info-icon {
+    font-size: 1.5rem;
+}
+
 .btn-github:hover {
     color: #da621d;
+    font-size: 1.75rem;
+    padding: .375rem 1.4rem;
 }
 .btn-linkedin:hover {
     color: #0077b5;
+    font-size: 1.75rem;
+    padding: .375rem 1.4rem;
 }
 .btn-twitter:hover {
     color: #1da1f2;
+    font-size: 1.75rem;
+    padding: .375rem 1.4rem;
 }
 .btn-blogger:hover {
     color: #f57d00;
+    font-size: 1.75rem;
+    padding: .375rem 1.4rem;
 }
 
 canvas {
