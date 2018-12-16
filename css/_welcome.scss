@@ -1,0 +1,11 @@
+#welcome {
+    background: transparent; 
+    font-size: 2rem;
+    position: relative;
+
+    .owl-carousel {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
