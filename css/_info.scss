@@ -1,0 +1,104 @@
+#info {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 30% auto 60% auto;
+    grid-template-rows: auto;
+    font-family: 'Biryani', sans-serif;
+}
+
+#introduction {
+    position: sticky;
+    top: 0;
+    grid-column: 2;
+    grid-row: 1;
+    // background-color: lightblue;
+
+    h1 {
+        font-size: 2.2rem;
+        margin-top: 0;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    table {
+        margin-top: 1rem;
+    }
+}
+
+#description {
+    grid-column: 4;
+    grid-row: 1;
+    // background-color: lightgreen;
+
+    h1 {
+        margin-top: 0;
+    }
+}
+
+ul.card__social-buttons {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        padding: 0 .5rem;
+
+        a {
+            display: block;
+            bottom: 0;
+            color: #ffffff;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            padding: .5rem 1rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all .2s ease;
+        }
+    }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: auto 30% auto 30% auto 30% auto;
+    grid-template-rows: 47.5% 5% 47.5%;
+    grid-row-gap: 1.3rem;
+    font-size: 1rem;
+    margin-top: 3rem;
+
+    $index: 1;
+    @for $row from 1 through 2 {
+        @for $column from 1 through 3 {
+            .skill-#{$index} {
+                text-align: center;
+                grid-column: $column * 2;
+                grid-row: $row * 2 - 1;
+                $index: $index + 1;
+            }
+        }
+    }
+
+    h3 {
+        margin-top: 1.2rem;
+    }
+    span {
+        font-size: .9rem;
+    }
+}
+
+.progressbar-angular, .progressbar-tsjs, .progressbar-spring,
+.progressbar-db, .progressbar-cleancode, .progressbar-passion {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+}
+
+
