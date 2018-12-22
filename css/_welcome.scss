@@ -2,6 +2,8 @@
     background: transparent;
     font-size: 2rem;
     position: relative;
+    grid-column: 1 / span 5;
+    grid-row: 1;
 
     .owl-carousel {
         position: absolute;

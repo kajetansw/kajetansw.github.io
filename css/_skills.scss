@@ -1,23 +1,4 @@
-#introduction {
-    position: sticky;
-    top: 0;
-    grid-column: 2;
-    grid-row: 2;
-    // background-color: lightblue;
-
-    h1 {
-        font-size: 2.2rem;
-        margin-top: 0;
-    }
-    h4 {
-        font-size: 1.5rem;
-    }
-    table {
-        margin-top: 1rem;
-    }
-}
-
-#description {
+#skills {
     grid-column: 4;
     grid-row: 2;
     // background-color: lightgreen;
