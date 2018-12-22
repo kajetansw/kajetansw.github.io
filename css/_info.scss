@@ -1,16 +1,8 @@
-#info {
-    position: relative;
-    display: grid;
-    grid-template-columns: auto 30% auto 60% auto;
-    grid-template-rows: auto;
-    font-family: 'Biryani', sans-serif;
-}
-
 #introduction {
     position: sticky;
     top: 0;
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 2;
     // background-color: lightblue;
 
     h1 {
@@ -27,7 +19,7 @@
 
 #description {
     grid-column: 4;
-    grid-row: 1;
+    grid-row: 2;
     // background-color: lightgreen;
 
     h1 {
