@@ -1,5 +1,5 @@
 // Owl-Carousel init
-var owl = $(".owl-carousel");
+var owl = $('.owl-carousel');
 owl.owlCarousel({
     items: 1,
     loop: true,
@@ -10,16 +10,16 @@ owl.owlCarousel({
     // autoplayHoverPause: true,
     center: true
 });
-$(".play").on("click", function() {
-    owl.trigger("play.owl.autoplay", [1000]);
+$('.play').on('click', function() {
+    owl.trigger('play.owl.autoplay', [1000]);
 });
-$(".stop").on("click", function() {
-    owl.trigger("stop.owl.autoplay");
+$('.stop').on('click', function() {
+    owl.trigger('stop.owl.autoplay');
 });
 
 // ParticlesJS init
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS("particles", {
+particlesJS('particles', {
     particles: {
         number: {
             value: 80,
@@ -29,19 +29,19 @@ particlesJS("particles", {
             }
         },
         color: {
-            value: "#ffffff"
+            value: '#ffffff'
         },
         shape: {
-            type: "circle",
+            type: 'circle',
             stroke: {
                 width: 0,
-                color: "#000000"
+                color: '#000000'
             },
             polygon: {
                 nb_sides: 5
             },
             image: {
-                src: "img/github.svg",
+                src: 'img/github.svg',
                 width: 100,
                 height: 100
             }
@@ -69,17 +69,17 @@ particlesJS("particles", {
         line_linked: {
             enable: true,
             distance: 150,
-            color: "#ffffff",
+            color: '#ffffff',
             opacity: 0.4,
             width: 1
         },
         move: {
             enable: true,
             speed: 6,
-            direction: "none",
+            direction: 'none',
             random: false,
             straight: false,
-            out_mode: "out",
+            out_mode: 'out',
             bounce: false,
             attract: {
                 enable: false,
@@ -89,15 +89,15 @@ particlesJS("particles", {
         }
     },
     interactivity: {
-        detect_on: "canvas",
+        detect_on: 'canvas',
         events: {
             onhover: {
                 enable: false,
-                mode: "repulse"
+                mode: 'repulse'
             },
             onclick: {
                 enable: false,
-                mode: "push"
+                mode: 'push'
             },
             resize: true
         },

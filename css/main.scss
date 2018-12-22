@@ -16,6 +16,10 @@ html, body {
     color: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: grid;
     grid-template-columns: auto 30% auto 60% auto;

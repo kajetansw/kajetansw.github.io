@@ -402,6 +402,10 @@ html, body {
   color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: -ms-grid;
   display: grid;
