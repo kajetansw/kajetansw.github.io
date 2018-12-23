@@ -54,9 +54,10 @@ canvas {
 
 #skills {
   -ms-grid-column: 4;
-  grid-column: 4;
-  -ms-grid-row: 2;
-  grid-row: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  -ms-grid-row: 1;
+  grid-row: 1;
 }
 
 #skills h1 {
@@ -173,9 +174,10 @@ ul.card__social-buttons li a {
 
 #timelines {
   -ms-grid-column: 4;
-  grid-column: 4;
-  -ms-grid-row: 3;
-  grid-row: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  -ms-grid-row: 1;
+  grid-row: 1;
   top: 50%;
   display: -ms-grid;
   display: grid;
@@ -402,17 +404,27 @@ html, body {
   color: white;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+.scrollable {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 30% auto 60% auto;
       grid-template-columns: auto 30% auto 60% auto;
-  -ms-grid-rows: 100vh 100vh 100vh;
-      grid-template-rows: 100vh 100vh 100vh;
+  -ms-grid-rows: 100vh 100vh;
+      grid-template-rows: 100vh 100vh;
+}
+
+.introduction__stick-with-scroll--down {
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  -webkit-transition: all 1000ms ease-in 0s;
+  transition: all 1000ms ease-in 0s;
+}
+
+.introduction__stick-with-scroll--up {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: all 1000ms ease-in 0s;
+  transition: all 1000ms ease-in 0s;
 }
 
 .card {

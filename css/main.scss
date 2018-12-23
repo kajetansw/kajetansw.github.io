@@ -16,19 +16,21 @@ html, body {
     color: white;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
+.scrollable {
     display: grid;
     grid-template-columns: auto 30% auto 60% auto;
-    grid-template-rows: 100vh 100vh 100vh;
+    grid-template-rows: 100vh 100vh;
 }
 
+.introduction__stick-with-scroll--down {
+    transform: translate3d(0, 100%, 0);
+    transition: all 1000ms ease-in 0s;
+}
 
-
-
+.introduction__stick-with-scroll--up {
+    transform: translate3d(0, 0, 0);
+    transition: all 1000ms ease-in 0s;
+}
 
 
 .card {
