@@ -213,13 +213,14 @@ ul.card__social-buttons li a {
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 25%;
+  text-align: center;
   max-width: 1200px;
   margin: 0 auto;
   color: #000;
   font-size: .75rem;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -312,6 +313,8 @@ ul.card__social-buttons li a {
   color: #ddd;
   position: relative;
   border-radius: 6px;
+  text-align: left;
+  opacity: 0;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -402,6 +405,221 @@ html, body {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   color: white;
+}
+
+.btn-timeline {
+  background-color: transparent;
+  font-size: 2rem;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: .5em;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(2.5);
+          transform: translate(-50%, -50%) scale(2.5);
+}
+
+/*
+##########################################
+   BTN TIMELINE ON CLICK
+##########################################
+*/
+@-webkit-keyframes btn-timeline-onclick {
+  from {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(2.5);
+            transform: translate(-50%, -50%) scale(2.5);
+  }
+  to {
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
+    top: 25%;
+  }
+}
+@keyframes btn-timeline-onclick {
+  from {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(2.5);
+            transform: translate(-50%, -50%) scale(2.5);
+  }
+  to {
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
+    top: 25%;
+  }
+}
+
+.btn-timeline-onclick {
+  -webkit-animation-name: btn-timeline-onclick;
+          animation-name: btn-timeline-onclick;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/*
+##########################################
+   SKILLS FROM RIGHT
+##########################################
+*/
+@-webkit-keyframes skills__from-right {
+  from {
+    left: 200px;
+    opacity: 0.4;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes skills__from-right {
+  from {
+    left: 200px;
+    opacity: 0.4;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.skills__from-right {
+  -webkit-animation-name: skills__from-right;
+          animation-name: skills__from-right;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+/*
+##########################################
+   TIMELINE SLIDE
+##########################################
+*/
+@-webkit-keyframes timeline__slide-out {
+  from {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes timeline__slide-out {
+  from {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.timeline__slide-out {
+  -webkit-animation-name: timeline__slide-out;
+          animation-name: timeline__slide-out;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/*
+##########################################
+   TIMELINE CONTENT FROM RIGHT
+##########################################
+*/
+@-webkit-keyframes timeline-content__from-right {
+  from {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes timeline-content__from-right {
+  from {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.timeline-content__from-right {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-animation-name: timeline-content__from-right;
+          animation-name: timeline-content__from-right;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/*
+##########################################
+   TIMELINE CONTENT FROM LEFT
+##########################################
+*/
+@-webkit-keyframes timeline-content__from-left {
+  from {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes timeline-content__from-left {
+  from {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.timeline-content__from-left {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-animation-name: timeline-content__from-left;
+          animation-name: timeline-content__from-left;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .scrollable {

@@ -1,3 +1,18 @@
+function isPageScrollFrom1To2(index) {
+    return (
+        (window.location.hash === '#1' || window.location.hash === '') &&
+        index === 2
+    );
+}
+
+function isPageScrollFrom2To3(index) {
+    return window.location.hash === '#2' && index === 3;
+}
+
+function isPageScrollFromFrom3To2(index) {
+    return window.location.hash === '#3' && index === 2;
+}
+
 $('.scrollable').onepage_scroll({
     sectionContainer: 'section',
     easing: 'ease-in',
@@ -5,7 +20,7 @@ $('.scrollable').onepage_scroll({
     pagination: false,
     updateURL: true,
     beforeMove: function(index) {
-        if (window.location.hash === '#2' && index === 3) {
+        if (isPageScrollFrom2To3(index)) {
             $('#introduction').addClass(
                 'introduction__stick-with-scroll--down'
             );
@@ -13,12 +28,14 @@ $('.scrollable').onepage_scroll({
                 'introduction__stick-with-scroll--up'
             );
             return;
-        } else if (window.location.hash === '#3' && index === 2) {
+        } else if (isPageScrollFromFrom3To2(index)) {
             $('#introduction').removeClass(
                 'introduction__stick-with-scroll--down'
             );
             $('#introduction').addClass('introduction__stick-with-scroll--up');
             return;
+        } else if (isPageScrollFrom1To2(index)) {
+            $('#skills').addClass('skills__from-right');
         }
     },
     afterMove: function(index) {},

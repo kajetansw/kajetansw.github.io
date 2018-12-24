@@ -34,12 +34,14 @@ $global-font-size: 16px;
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 25%;
+    text-align: center;
+    // transform: translateY(-50%);
     max-width: 1200px;
     margin: 0 auto;
     color: #000;
     font-size: .75rem;
+    transform: scale(1, 0);
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -132,6 +134,8 @@ $global-font-size: 16px;
     color: #ddd;
     position: relative;
     border-radius: 6px;
+    text-align: left;
+    opacity: 0;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
