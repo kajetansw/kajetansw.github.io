@@ -1,15 +1,3 @@
-/* const timelineAuto = new TimelineMax();
-
-const controller = new ScrollMagic.Controller();
-
-// timelineAuto.from('#introduction', 1, { scale: 0.5, opacity: 0 });
-timelineAuto.from('#skills', 1, { left: 100, opacity: 0 }, '=+1');
-
-const sceneAuto = new ScrollMagic.Scene({})
-    .setTween(timelineAuto)
-    .addTo(controller);
- */
-
 function showExperienceTimeline() {
     const btnExperience = $('#experience .btn-timeline');
     const timeline = $('#experience > .timeline');

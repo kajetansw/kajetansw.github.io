@@ -1,0 +1,149 @@
+/*
+##########################################
+   BTN TIMELINE ROTATE ON HOVER
+##########################################
+*/
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+
+#experience .btn-timeline:hover:before {
+    transform: rotate(-360deg);
+    animation-name: rotate;
+    animation-duration: .5s;
+    margin: 0;
+    padding: 0;
+    font-size: .7rem;
+    font-family: 'Quicksand', sans-serif;
+    display: inline-block;
+    content: 'View my experience here!';
+}
+
+#education .btn-timeline:hover:before {
+    transform: rotate(-360deg);
+    animation-name: rotate;
+    animation-duration: .5s;
+    margin: 0;
+    padding: 0;
+    font-size: .7rem;
+    font-family: 'Quicksand', sans-serif;
+    display: inline-block;
+    content: 'View my education here!';
+}
+
+/*
+##########################################
+   BTN TIMELINE ON CLICK
+##########################################
+*/
+
+@keyframes btn-timeline-onclick {
+    to {
+        transform: translateX(-50%) scale(1);
+        top: 25%;
+    }
+}
+
+.btn-timeline-onclick {
+    animation-name: btn-timeline-onclick;
+    animation-duration: 1s;
+    transform-origin: 50% 50%;
+    animation-fill-mode: forwards;
+}
+
+/*
+##########################################
+   SKILLS FROM RIGHT
+##########################################
+*/
+
+@keyframes skills__from-right {
+    from {
+        left: 200px;
+        opacity: 0.4;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.skills__from-right {
+    animation-name: skills__from-right;
+    animation-duration: 2s;
+}
+
+/*
+##########################################
+   TIMELINE SLIDE
+##########################################
+*/
+
+@keyframes timeline__slide-out {
+    from {
+        transform: scale(1, 0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.timeline__slide-out {
+    animation-name: timeline__slide-out;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    transform-origin: 50% 0%;
+    animation-fill-mode: forwards;
+}
+
+/*
+##########################################
+   TIMELINE CONTENT FROM RIGHT
+##########################################
+*/
+
+@keyframes timeline-content__from-right {
+    from {
+        transform: scale(0, 1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.timeline-content__from-right {
+    animation-delay: 3s;
+    transform-origin: 100% 50%;
+    animation-name: timeline-content__from-right;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/*
+##########################################
+   TIMELINE CONTENT FROM LEFT
+##########################################
+*/
+
+@keyframes timeline-content__from-left {
+    from {
+        transform: scale(0, 1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.timeline-content__from-left {
+    animation-delay: 3s;
+    transform-origin: 0% 50%;
+    animation-name: timeline-content__from-left;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}

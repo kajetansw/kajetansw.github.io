@@ -3,6 +3,7 @@
 @import 'introduction';
 @import 'skills';
 @import 'timelines';
+@import 'timelines-animation';
 @import 'common';
 
 $media-limit-lg: 1080px;
@@ -17,162 +18,11 @@ html, body {
 }
 
 
-.btn-timeline {
-    background-color: transparent;
-    font-size: 2rem;
-    color: white;
-    border: 1px solid white;
-    border-radius: 50%;
-    padding: .5em;
-    cursor: pointer;
-    position: relative;
-    display: block;
-    left: 50%;
-    top: 50%;
-    transform:  translate(-50%, -50%) scale(2.5);
-}
-
-
-/*
-##########################################
-   BTN TIMELINE ON CLICK
-##########################################
-*/
-
-@keyframes btn-timeline-onclick {
-    from {
-        top: 50%;
-        transform:  translate(-50%, -50%) scale(2.5);
-    }
-    to {
-        transform: translateX(-50%) scale(1);
-        top: 25%;
-    }
-}
-
-.btn-timeline-onclick {
-    animation-name: btn-timeline-onclick;
-    animation-duration: 1s;
-    transform-origin: 50% 50%;
-    animation-fill-mode: forwards;
-}
-
-/*
-##########################################
-   SKILLS FROM RIGHT
-##########################################
-*/
-
-@keyframes skills__from-right {
-    from {
-        left: 200px;
-        opacity: 0.4;
-    }
-    to {
-        left: 0;
-        opacity: 1;
-    }
-}
-
-.skills__from-right {
-    animation-name: skills__from-right;
-    animation-duration: 2s;
-}
-
-/*
-##########################################
-   TIMELINE SLIDE
-##########################################
-*/
-
-@keyframes timeline__slide-out {
-    from {
-        transform: scale(1, 0);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-.timeline__slide-out {
-    animation-name: timeline__slide-out;
-    animation-delay: 1s;
-    animation-duration: 2s;
-    transform-origin: 50% 0%;
-    animation-fill-mode: forwards;
-}
-
-/*
-##########################################
-   TIMELINE CONTENT FROM RIGHT
-##########################################
-*/
-
-@keyframes timeline-content__from-right {
-    from {
-        transform: scale(0, 1);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.timeline-content__from-right {
-    animation-delay: 3s;
-    transform-origin: 100% 50%;
-    animation-name: timeline-content__from-right;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-/*
-##########################################
-   TIMELINE CONTENT FROM LEFT
-##########################################
-*/
-
-@keyframes timeline-content__from-left {
-    from {
-        transform: scale(0, 1);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.timeline-content__from-left {
-    animation-delay: 3s;
-    transform-origin: 0% 50%;
-    animation-name: timeline-content__from-left;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-
-
-
-
-
-
 
 .scrollable {
     display: grid;
     grid-template-columns: auto 30% auto 60% auto;
     grid-template-rows: 100vh 100vh;
-}
-
-.introduction__stick-with-scroll--down {
-    transform: translate3d(0, 100%, 0);
-    transition: all 1000ms ease-in 0s;
-}
-
-.introduction__stick-with-scroll--up {
-    transform: translate3d(0, 0, 0);
-    transition: all 1000ms ease-in 0s;
 }
 
 

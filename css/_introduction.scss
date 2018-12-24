@@ -17,3 +17,12 @@
     }
 }
 
+.introduction__stick-with-scroll--down {
+    transform: translate3d(0, 100%, 0);
+    transition: all 1000ms ease-in 0s;
+}
+
+.introduction__stick-with-scroll--up {
+    transform: translate3d(0, 0, 0);
+    transition: all 1000ms ease-in 0s;
+}

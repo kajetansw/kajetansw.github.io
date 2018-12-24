@@ -52,6 +52,20 @@ canvas {
   margin-top: 1rem;
 }
 
+.introduction__stick-with-scroll--down {
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  -webkit-transition: all 1000ms ease-in 0s;
+  transition: all 1000ms ease-in 0s;
+}
+
+.introduction__stick-with-scroll--up {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: all 1000ms ease-in 0s;
+  transition: all 1000ms ease-in 0s;
+}
+
 #skills {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
@@ -210,6 +224,39 @@ ul.card__social-buttons li a {
           box-sizing: border-box;
 }
 
+.btn-timeline {
+  background-color: transparent;
+  font-size: 2rem;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: .5em;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(2);
+          transform: translate(-50%, -50%) scale(2);
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.btn-timeline:hover {
+  background-color: rgba(64, 77, 78, 0.5);
+  width: 5.5rem;
+  height: 5.5rem;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.btn-timeline:hover i {
+  display: none;
+}
+
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
@@ -347,80 +394,59 @@ ul.card__social-buttons li a {
 }
 
 /*
-=======================    
-    HELPER CLASSES
-=======================    
+##########################################
+   BTN TIMELINE ROTATE ON HOVER
+##########################################
 */
-.text--centered {
-  text-align: center;
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
 }
 
-.pl-1 {
-  padding-left: 4px;
-}
-
-.pl-2 {
-  padding-left: 10px;
-}
-
-.pl-3 {
-  padding-left: 16px;
-}
-
-.pl-4 {
-  padding-left: 22px;
-}
-
-.pl-5 {
-  padding-left: 28px;
-}
-
-.py-1 {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.py-2 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.py-3 {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-.py-4 {
-  padding-top: 22px;
-  padding-bottom: 22px;
-}
-
-.py-5 {
-  padding-top: 28px;
-  padding-bottom: 28px;
-}
-
-html, body {
+#experience .btn-timeline:hover:before {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
   margin: 0;
+  padding: 0;
+  font-size: .7rem;
   font-family: 'Quicksand', sans-serif;
-  font-size: 16px;
-  color: white;
+  display: inline-block;
+  content: 'View my experience here!';
 }
 
-.btn-timeline {
-  background-color: transparent;
-  font-size: 2rem;
-  color: white;
-  border: 1px solid white;
-  border-radius: 50%;
-  padding: .5em;
-  cursor: pointer;
-  position: relative;
-  display: block;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(2.5);
-          transform: translate(-50%, -50%) scale(2.5);
+#education .btn-timeline:hover:before {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  margin: 0;
+  padding: 0;
+  font-size: .7rem;
+  font-family: 'Quicksand', sans-serif;
+  display: inline-block;
+  content: 'View my education here!';
 }
 
 /*
@@ -429,11 +455,6 @@ html, body {
 ##########################################
 */
 @-webkit-keyframes btn-timeline-onclick {
-  from {
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%) scale(2.5);
-            transform: translate(-50%, -50%) scale(2.5);
-  }
   to {
     -webkit-transform: translateX(-50%) scale(1);
             transform: translateX(-50%) scale(1);
@@ -441,11 +462,6 @@ html, body {
   }
 }
 @keyframes btn-timeline-onclick {
-  from {
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%) scale(2.5);
-            transform: translate(-50%, -50%) scale(2.5);
-  }
   to {
     -webkit-transform: translateX(-50%) scale(1);
             transform: translateX(-50%) scale(1);
@@ -622,6 +638,67 @@ html, body {
           animation-fill-mode: forwards;
 }
 
+/*
+=======================    
+    HELPER CLASSES
+=======================    
+*/
+.text--centered {
+  text-align: center;
+}
+
+.pl-1 {
+  padding-left: 4px;
+}
+
+.pl-2 {
+  padding-left: 10px;
+}
+
+.pl-3 {
+  padding-left: 16px;
+}
+
+.pl-4 {
+  padding-left: 22px;
+}
+
+.pl-5 {
+  padding-left: 28px;
+}
+
+.py-1 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.py-2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.py-3 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.py-4 {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.py-5 {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
 .scrollable {
   display: -ms-grid;
   display: grid;
@@ -629,20 +706,6 @@ html, body {
       grid-template-columns: auto 30% auto 60% auto;
   -ms-grid-rows: 100vh 100vh;
       grid-template-rows: 100vh 100vh;
-}
-
-.introduction__stick-with-scroll--down {
-  -webkit-transform: translate3d(0, 100%, 0);
-          transform: translate3d(0, 100%, 0);
-  -webkit-transition: all 1000ms ease-in 0s;
-  transition: all 1000ms ease-in 0s;
-}
-
-.introduction__stick-with-scroll--up {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-transition: all 1000ms ease-in 0s;
-  transition: all 1000ms ease-in 0s;
 }
 
 .card {
