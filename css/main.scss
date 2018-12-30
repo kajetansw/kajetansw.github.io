@@ -17,6 +17,77 @@ html, body {
     color: white;
 }
 
+@media only screen and (max-width: $media-limit-lg) {
+    body > div:nth-child(2) {
+        display: grid;
+        grid-template-columns: auto 90% auto;
+        grid-template-rows: 100vh 120vh 300vh 200vh;
+    }
+
+    #welcome {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
+    #introduction {
+        grid-column: 2;
+        grid-row: 2;
+        position: static;
+    }
+
+    #skills {
+        grid-column: 2;
+        grid-row: 3;
+        margin: 0;
+
+        .skills-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: auto 90% auto;
+            grid-template-rows: repeat(6, auto);
+            grid-row-gap: 2.2rem;
+
+            $index: 1;
+            @for $row from 1 through 6 {
+                .skill-#{$index} {
+                    text-align: center;
+                    grid-column: 2;
+                    grid-row: $index;
+                    $index: $index + 1;
+                }
+            }
+        }
+    }
+
+    #timelines {
+        grid-column: 2;
+        grid-row: 4;
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 100vh 100vh;
+
+        #experience {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        #education {
+            grid-column: 1;
+            grid-row: 2;
+        }
+    }
+
+    div.card {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        top: auto;
+        height: auto;
+        transform: none;
+    }
+}
+
 
 
 .scrollable {

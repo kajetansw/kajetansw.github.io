@@ -343,7 +343,7 @@ ul.card__social-buttons li a {
 .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
+  width: 3px;
   background-color: white;
   top: 0;
   bottom: 0;
@@ -437,7 +437,7 @@ ul.card__social-buttons li a {
 @media screen and (max-width: 768px) {
   /* Place the timelime to the left */
   .timeline::after {
-    left: 31px;
+    left: 28px;
   }
   /* Full-width containers */
   .container {
@@ -448,9 +448,9 @@ ul.card__social-buttons li a {
   /* Make sure that all arrows are pointing leftwards */
   .container::before {
     left: 3.75rem;
-    border: medium solid white;
+    border: medium solid rgba(64, 77, 78, 0.5);
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent rgba(64, 77, 78, 0.5) transparent transparent;
   }
   /* Make sure all circles are at the same spot */
   .left::after, .right::after {
@@ -733,6 +733,130 @@ html, body {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   color: white;
+}
+
+@media only screen and (max-width: 1080px) {
+  body > div:nth-child(2) {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 90% auto;
+        grid-template-columns: auto 90% auto;
+    -ms-grid-rows: 100vh 120vh 300vh 200vh;
+        grid-template-rows: 100vh 120vh 300vh 200vh;
+  }
+  #welcome {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  #introduction {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    position: static;
+  }
+  #skills {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+    margin: 0;
+  }
+  #skills .skills-grid {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 90% auto;
+        grid-template-columns: auto 90% auto;
+    -ms-grid-rows: (auto)[6];
+        grid-template-rows: repeat(6, auto);
+    grid-row-gap: 2.2rem;
+  }
+  #skills .skills-grid .skill-1 {
+    text-align: center;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  #skills .skills-grid .skill-2 {
+    text-align: center;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  #skills .skills-grid .skill-3 {
+    text-align: center;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  #skills .skills-grid .skill-4 {
+    text-align: center;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+  #skills .skills-grid .skill-5 {
+    text-align: center;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 5;
+    grid-row: 5;
+  }
+  #skills .skills-grid .skill-6 {
+    text-align: center;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 6;
+    grid-row: 6;
+  }
+  #timelines {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 4;
+    grid-row: 4;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: 100vh 100vh;
+        grid-template-rows: 100vh 100vh;
+  }
+  #timelines #experience {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  #timelines #education {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  div.card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100vh;
+    top: auto;
+    height: auto;
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 .scrollable {

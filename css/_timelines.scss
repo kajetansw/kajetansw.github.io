@@ -76,7 +76,7 @@ $global-font-size: 16px;
 .timeline::after {
     content: '';
     position: absolute;
-    width: 6px;
+    width: 3px;
     background-color: white;
     top: 0;
     bottom: 0;
@@ -170,7 +170,7 @@ $global-font-size: 16px;
 @media screen and (max-width: $media-limit-sm) {
 /* Place the timelime to the left */
     .timeline::after {
-        left: 31px;
+        left: 28px;
     }
 
 /* Full-width containers */
@@ -183,9 +183,9 @@ $global-font-size: 16px;
 /* Make sure that all arrows are pointing leftwards */
     .container::before {
         left: 3.75rem;
-        border: medium solid white;
+        border: medium solid rgba(#404d4e, 0.5);
         border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
+        border-color: transparent rgba(#404d4e, 0.5) transparent transparent;
     }
 
 /* Make sure all circles are at the same spot */
