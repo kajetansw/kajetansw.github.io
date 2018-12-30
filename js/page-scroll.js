@@ -35,7 +35,9 @@ $('.scrollable').onepage_scroll({
             $('#introduction').addClass('introduction__stick-with-scroll--up');
             return;
         } else if (isPageScrollFrom1To2(index)) {
-            $('#skills').addClass('skills__from-right');
+            $('#introduction .card').addClass('introduction__slide-from-left');
+            $('#skills').addClass('skills__slide-from-right');
+            return;
         }
     },
     afterMove: function(index) {},

@@ -26,3 +26,27 @@
     transform: translate3d(0, 0, 0);
     transition: all 1000ms ease-in 0s;
 }
+
+
+/*
+##########################################
+   INTRODUCTION SLIDE FROM LEFT
+##########################################
+*/
+
+@keyframes introduction__from-left {
+    from {
+        left: -100%;
+        opacity: 0.4;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.introduction__slide-from-left {
+    animation-name: introduction__from-left;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}

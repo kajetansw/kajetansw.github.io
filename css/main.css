@@ -66,6 +66,41 @@ canvas {
   transition: all 1000ms ease-in 0s;
 }
 
+/*
+##########################################
+   INTRODUCTION SLIDE FROM LEFT
+##########################################
+*/
+@-webkit-keyframes introduction__from-left {
+  from {
+    left: -100%;
+    opacity: 0.4;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes introduction__from-left {
+  from {
+    left: -100%;
+    opacity: 0.4;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.introduction__slide-from-left {
+  -webkit-animation-name: introduction__from-left;
+          animation-name: introduction__from-left;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
 #skills {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
@@ -212,7 +247,7 @@ ul.card__social-buttons li a {
   }
 }
 
-.skills__from-right {
+.skills__slide-from-right {
   -webkit-animation-name: skills__from-right;
           animation-name: skills__from-right;
   -webkit-animation-duration: 2s;
