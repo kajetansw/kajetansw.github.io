@@ -1,6 +1,10 @@
+$timeline-btn-click__animation-duration: 0.8s;
+$timeline-slide-down__animation-duration: 1s;
+$timeline-content-slide-to-sides__animation-duration: 1s;
+
 /*
 ##########################################
-   BTN TIMELINE ROTATE ON HOVER
+   BUTTON TIMELINE ROTATE ON HOVER
 ##########################################
 */
 
@@ -35,44 +39,22 @@
 
 /*
 ##########################################
-   BTN TIMELINE ON CLICK
+   BUTTON TIMELINE ON CLICK
 ##########################################
 */
 
 @keyframes btn-timeline-onclick {
     to {
         transform: translateX(-50%) scale(1);
-        top: 25%;
+        top: 10%;
     }
 }
 
 .btn-timeline-onclick {
     animation-name: btn-timeline-onclick;
-    animation-duration: 1s;
+    animation-duration: $timeline-btn-click__animation-duration;
     transform-origin: 50% 50%;
     animation-fill-mode: forwards;
-}
-
-/*
-##########################################
-   SKILLS FROM RIGHT
-##########################################
-*/
-
-@keyframes skills__from-right {
-    from {
-        left: 200px;
-        opacity: 0.4;
-    }
-    to {
-        left: 0;
-        opacity: 1;
-    }
-}
-
-.skills__from-right {
-    animation-name: skills__from-right;
-    animation-duration: 2s;
 }
 
 /*
@@ -81,7 +63,7 @@
 ##########################################
 */
 
-@keyframes timeline__slide-out {
+@keyframes slide-out-from-top {
     from {
         transform: scale(1, 0);
     }
@@ -90,10 +72,10 @@
     }
 }
 
-.timeline__slide-out {
-    animation-name: timeline__slide-out;
-    animation-delay: 1s;
-    animation-duration: 2s;
+.timeline--slide-out {
+    animation-name: slide-out-from-top;
+    animation-delay: $timeline-btn-click__animation-duration;
+    animation-duration: $timeline-slide-down__animation-duration;
     transform-origin: 50% 0%;
     animation-fill-mode: forwards;
 }
@@ -104,7 +86,7 @@
 ##########################################
 */
 
-@keyframes timeline-content__from-right {
+@keyframes slide-from-right {
     from {
         transform: scale(0, 1);
         opacity: 0;
@@ -115,11 +97,13 @@
     }
 }
 
-.timeline-content__from-right {
-    animation-delay: 3s;
+.timeline-content--from-right {
+    animation-delay:
+        $timeline-btn-click__animation-duration
+        + $timeline-slide-down__animation-duration;
     transform-origin: 100% 50%;
-    animation-name: timeline-content__from-right;
-    animation-duration: 2s;
+    animation-name: slide-from-right;
+    animation-duration: $timeline-content-slide-to-sides__animation-duration;
     animation-fill-mode: forwards;
 }
 
@@ -129,7 +113,7 @@
 ##########################################
 */
 
-@keyframes timeline-content__from-left {
+@keyframes slide-from-left {
     from {
         transform: scale(0, 1);
         opacity: 0;
@@ -140,10 +124,12 @@
     }
 }
 
-.timeline-content__from-left {
-    animation-delay: 3s;
+.timeline-content--from-left {
+    animation-delay:
+        $timeline-btn-click__animation-duration
+        + $timeline-slide-down__animation-duration;
     transform-origin: 0% 50%;
-    animation-name: timeline-content__from-left;
-    animation-duration: 2s;
+    animation-name: slide-from-left;
+    animation-duration: $timeline-content-slide-to-sides__animation-duration;
     animation-fill-mode: forwards;
 }

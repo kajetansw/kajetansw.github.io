@@ -75,3 +75,27 @@ ul.card__social-buttons {
 }
 
 
+
+
+/*
+##########################################
+   SKILLS SLIDE FROM RIGHT
+##########################################
+*/
+
+@keyframes skills__from-right {
+    from {
+        left: 100%;
+        opacity: 0.4;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.skills__from-right {
+    animation-name: skills__from-right;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}

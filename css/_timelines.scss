@@ -5,7 +5,6 @@ $global-font-size: 16px;
 #timelines {
     grid-column: 4 / 5;
     grid-row: 1;
-    top: 50%;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
@@ -63,7 +62,7 @@ $global-font-size: 16px;
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
-    top: 25%;
+    top: 10%;
     text-align: center;
     // transform: translateY(-50%);
     max-width: 1200px;

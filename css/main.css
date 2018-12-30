@@ -186,13 +186,47 @@ ul.card__social-buttons li a {
   position: relative;
 }
 
+/*
+##########################################
+   SKILLS SLIDE FROM RIGHT
+##########################################
+*/
+@-webkit-keyframes skills__from-right {
+  from {
+    left: 100%;
+    opacity: 0.4;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes skills__from-right {
+  from {
+    left: 100%;
+    opacity: 0.4;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.skills__from-right {
+  -webkit-animation-name: skills__from-right;
+          animation-name: skills__from-right;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
 #timelines {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4 / 5;
   -ms-grid-row: 1;
   grid-row: 1;
-  top: 50%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
@@ -260,7 +294,7 @@ ul.card__social-buttons li a {
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
-  top: 25%;
+  top: 10%;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -395,7 +429,7 @@ ul.card__social-buttons li a {
 
 /*
 ##########################################
-   BTN TIMELINE ROTATE ON HOVER
+   BUTTON TIMELINE ROTATE ON HOVER
 ##########################################
 */
 @-webkit-keyframes rotate {
@@ -451,29 +485,29 @@ ul.card__social-buttons li a {
 
 /*
 ##########################################
-   BTN TIMELINE ON CLICK
+   BUTTON TIMELINE ON CLICK
 ##########################################
 */
 @-webkit-keyframes btn-timeline-onclick {
   to {
     -webkit-transform: translateX(-50%) scale(1);
             transform: translateX(-50%) scale(1);
-    top: 25%;
+    top: 10%;
   }
 }
 @keyframes btn-timeline-onclick {
   to {
     -webkit-transform: translateX(-50%) scale(1);
             transform: translateX(-50%) scale(1);
-    top: 25%;
+    top: 10%;
   }
 }
 
 .btn-timeline-onclick {
   -webkit-animation-name: btn-timeline-onclick;
           animation-name: btn-timeline-onclick;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   -webkit-animation-fill-mode: forwards;
@@ -482,43 +516,10 @@ ul.card__social-buttons li a {
 
 /*
 ##########################################
-   SKILLS FROM RIGHT
-##########################################
-*/
-@-webkit-keyframes skills__from-right {
-  from {
-    left: 200px;
-    opacity: 0.4;
-  }
-  to {
-    left: 0;
-    opacity: 1;
-  }
-}
-@keyframes skills__from-right {
-  from {
-    left: 200px;
-    opacity: 0.4;
-  }
-  to {
-    left: 0;
-    opacity: 1;
-  }
-}
-
-.skills__from-right {
-  -webkit-animation-name: skills__from-right;
-          animation-name: skills__from-right;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
-/*
-##########################################
    TIMELINE SLIDE
 ##########################################
 */
-@-webkit-keyframes timeline__slide-out {
+@-webkit-keyframes slide-out-from-top {
   from {
     -webkit-transform: scale(1, 0);
             transform: scale(1, 0);
@@ -528,7 +529,7 @@ ul.card__social-buttons li a {
             transform: scale(1);
   }
 }
-@keyframes timeline__slide-out {
+@keyframes slide-out-from-top {
   from {
     -webkit-transform: scale(1, 0);
             transform: scale(1, 0);
@@ -539,13 +540,13 @@ ul.card__social-buttons li a {
   }
 }
 
-.timeline__slide-out {
-  -webkit-animation-name: timeline__slide-out;
-          animation-name: timeline__slide-out;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+.timeline--slide-out {
+  -webkit-animation-name: slide-out-from-top;
+          animation-name: slide-out-from-top;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-transform-origin: 50% 0%;
           transform-origin: 50% 0%;
   -webkit-animation-fill-mode: forwards;
@@ -557,7 +558,7 @@ ul.card__social-buttons li a {
    TIMELINE CONTENT FROM RIGHT
 ##########################################
 */
-@-webkit-keyframes timeline-content__from-right {
+@-webkit-keyframes slide-from-right {
   from {
     -webkit-transform: scale(0, 1);
             transform: scale(0, 1);
@@ -569,7 +570,7 @@ ul.card__social-buttons li a {
     opacity: 1;
   }
 }
-@keyframes timeline-content__from-right {
+@keyframes slide-from-right {
   from {
     -webkit-transform: scale(0, 1);
             transform: scale(0, 1);
@@ -582,15 +583,15 @@ ul.card__social-buttons li a {
   }
 }
 
-.timeline-content__from-right {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+.timeline-content--from-right {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
   -webkit-transform-origin: 100% 50%;
           transform-origin: 100% 50%;
-  -webkit-animation-name: timeline-content__from-right;
-          animation-name: timeline-content__from-right;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-name: slide-from-right;
+          animation-name: slide-from-right;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -600,7 +601,7 @@ ul.card__social-buttons li a {
    TIMELINE CONTENT FROM LEFT
 ##########################################
 */
-@-webkit-keyframes timeline-content__from-left {
+@-webkit-keyframes slide-from-left {
   from {
     -webkit-transform: scale(0, 1);
             transform: scale(0, 1);
@@ -612,7 +613,7 @@ ul.card__social-buttons li a {
     opacity: 1;
   }
 }
-@keyframes timeline-content__from-left {
+@keyframes slide-from-left {
   from {
     -webkit-transform: scale(0, 1);
             transform: scale(0, 1);
@@ -625,15 +626,15 @@ ul.card__social-buttons li a {
   }
 }
 
-.timeline-content__from-left {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+.timeline-content--from-left {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
   -webkit-transform-origin: 0% 50%;
           transform-origin: 0% 50%;
-  -webkit-animation-name: timeline-content__from-left;
-          animation-name: timeline-content__from-left;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-name: slide-from-left;
+          animation-name: slide-from-left;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
