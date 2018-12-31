@@ -5,21 +5,7 @@
 @import 'timelines';
 @import 'timelines-animation';
 @import 'common';
-
-$media-limit-lg: 1080px;
-$media-limit-sm: 768px;
-$global-font-size: 16px;
-
-@keyframes pulse {
-    from {
-        box-shadow: 0 0 0 0 #212121,
-                    0 0 0 0 rgba(255,255,255,1);
-    }
-    to {
-        box-shadow: 0 0 0 6px #212121,
-                    0 0 0 8px rgba(133, 133, 133, 0.5);
-    }
-}
+@import 'variables';
 
 html, body {
     margin: 0;
@@ -32,87 +18,15 @@ html, body {
     body > div:nth-child(2) {
         display: grid;
         grid-template-columns: auto 90% auto;
-        grid-template-rows: 100vh 120vh 300vh 200vh;
-    }
-
-    #welcome {
-        grid-column: 1 / span 3;
-        grid-row: 1;
-    }
-
-    #introduction {
-        grid-column: 2;
-        grid-row: 2;
-        position: static;
-    }
-
-    #skills {
-        grid-column: 2;
-        grid-row: 3;
-        margin: 0;
-
-        .skills-grid {
-            flex: 1;
-            display: grid;
-            grid-template-columns: auto 45% auto 45% auto;
-            grid-template-rows: repeat(6, auto);
-            grid-row-gap: 2.2rem;
-
-            $index: 1;
-            @for $row from 1 through 3 {
-                @for $column from 1 through 2 {
-                    .skill-#{$index} {
-                        text-align: center;
-                        grid-column: $column * 2;
-                        grid-row: $row;
-                        $index: $index + 1;
-                    }
-                }
-            }
-        }
-    }
-
-    #timelines {
-        grid-column: 2;
-        grid-row: 4;
-
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 100vh 100vh;
-
-        #experience {
-            grid-column: 1;
-            grid-row: 1;
-        }
-
-        #education {
-            grid-column: 1;
-            grid-row: 2;
-        }
-
-        .btn-timeline--pulse {
-            animation: pulse 1s infinite ease-out;
-        }
-    }
-
-    div.card {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        top: auto;
-        height: auto;
-        transform: none;
+        grid-template-rows: 100vh 120vh 175vh 200vh;
     }
 }
-
-
 
 .scrollable {
     display: grid;
     grid-template-columns: auto 30% auto 60% auto;
     grid-template-rows: 100vh 100vh;
 }
-
 
 .card {
     position: relative;
@@ -122,30 +36,4 @@ html, body {
     padding: 1.5rem;
     background-color: rgba(#404d4e, 0.5);
     border-radius: 1rem;
-}
-
-
-.info-icon {
-    font-size: 1.5rem;
-}
-
-.btn-github:hover {
-    color: #da621d;
-    font-size: 1.75rem;
-    padding: .375rem .9rem;
-}
-.btn-linkedin:hover {
-    color: #0077b5;
-    font-size: 1.75rem;
-    padding: .375rem .9rem;
-}
-.btn-twitter:hover {
-    color: #1da1f2;
-    font-size: 1.75rem;
-    padding: .375rem .9rem;
-}
-.btn-blogger:hover {
-    color: #f57d00;
-    font-size: 1.75rem;
-    padding: .375rem .9rem;
 }

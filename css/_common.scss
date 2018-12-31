@@ -1,9 +1,9 @@
-$global-font-size: 16px;
+@import 'variables';
 
 /*
-=======================    
+=======================
     HELPER CLASSES
-=======================    
+=======================
 */
 
 .text--centered {
@@ -11,14 +11,14 @@ $global-font-size: 16px;
 }
 
 @for $i from 1 through 5 {
-    .pl-#{$i} { 
-        padding-left: $global-font-size - (3 - $i)*0.375*$global-font-size; 
+    .pl-#{$i} {
+        padding-left: $global-font-size - (3 - $i)*0.375*$global-font-size;
     }
 }
 
 @for $i from 1 through 5 {
-    .py-#{$i} { 
-        padding-top: $global-font-size - (3 - $i) * 0.375 * $global-font-size; 
-        padding-bottom: $global-font-size - (3 - $i) * 0.375 * $global-font-size; 
+    .py-#{$i} {
+        padding-top: $global-font-size - (3 - $i) * 0.375 * $global-font-size;
+        padding-bottom: $global-font-size - (3 - $i) * 0.375 * $global-font-size;
     }
 }

@@ -1,6 +1,4 @@
-$media-limit-lg: 1080px;
-$media-limit-sm: 768px;
-$global-font-size: 16px;
+@import 'variables';
 
 #timelines {
     grid-column: 4 / 5;
@@ -166,6 +164,8 @@ $global-font-size: 16px;
     opacity: 0;
 }
 
+
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: $media-limit-sm) {
 /* Place the timelime to the left */
@@ -196,5 +196,43 @@ $global-font-size: 16px;
 /* Make all right containers behave like the left ones */
     .right {
         left: 0%;
+    }
+}
+
+
+
+@media only screen and (max-width: $media-limit-lg) {
+    #timelines {
+        grid-column: 2;
+        grid-row: 4;
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 100vh 100vh;
+
+        #experience {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        #education {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .btn-timeline--pulse {
+            animation: pulse 1s infinite ease-out;
+        }
+    }
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 0 0 #212121,
+                    0 0 0 0 rgba(255,255,255,1);
+    }
+    to {
+        box-shadow: 0 0 0 6px #212121,
+                    0 0 0 8px rgba(133, 133, 133, 0.5);
     }
 }

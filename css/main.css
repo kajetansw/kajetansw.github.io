@@ -29,6 +29,16 @@ canvas {
           transform: translateY(-50%);
 }
 
+@media only screen and (max-width: 1080px) {
+  #welcome {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+}
+
 #introduction {
   position: -webkit-sticky;
   position: sticky;
@@ -52,6 +62,34 @@ canvas {
   margin-top: 1rem;
 }
 
+.info-icon {
+  font-size: 1.5rem;
+}
+
+.btn-github:hover {
+  color: #da621d;
+  font-size: 1.75rem;
+  padding: .375rem .9rem;
+}
+
+.btn-linkedin:hover {
+  color: #0077b5;
+  font-size: 1.75rem;
+  padding: .375rem .9rem;
+}
+
+.btn-twitter:hover {
+  color: #1da1f2;
+  font-size: 1.75rem;
+  padding: .375rem .9rem;
+}
+
+.btn-blogger:hover {
+  color: #f57d00;
+  font-size: 1.75rem;
+  padding: .375rem .9rem;
+}
+
 .introduction__stick-with-scroll--down {
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
@@ -66,12 +104,22 @@ canvas {
   transition: all 1000ms ease-in 0s;
 }
 
+@media only screen and (max-width: 1080px) {
+  #introduction {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    position: static;
+  }
+}
+
 /*
 ##########################################
    INTRODUCTION SLIDE FROM LEFT
 ##########################################
 */
-@-webkit-keyframes introduction__from-left {
+@-webkit-keyframes introduction__slide-from-left {
   from {
     left: -100%;
     opacity: 0.4;
@@ -81,7 +129,7 @@ canvas {
     opacity: 1;
   }
 }
-@keyframes introduction__from-left {
+@keyframes introduction__slide-from-left {
   from {
     left: -100%;
     opacity: 0.4;
@@ -93,8 +141,8 @@ canvas {
 }
 
 .introduction__slide-from-left {
-  -webkit-animation-name: introduction__from-left;
-          animation-name: introduction__from-left;
+  -webkit-animation-name: introduction__slide-from-left;
+          animation-name: introduction__slide-from-left;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-timing-function: ease;
@@ -219,6 +267,84 @@ ul.card__social-buttons li a {
   width: 6rem;
   height: 6rem;
   position: relative;
+}
+
+@media only screen and (max-width: 1080px) {
+  #skills {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+    margin: 0;
+  }
+  #skills .skills-grid {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 45% auto 45% auto;
+        grid-template-columns: auto 45% auto 45% auto;
+    -ms-grid-rows: (auto)[6];
+        grid-template-rows: repeat(6, auto);
+    grid-row-gap: 2.2rem;
+  }
+  #skills .skills-grid .skill-1 {
+    text-align: center;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  #skills .skills-grid .skill-2 {
+    text-align: center;
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  #skills .skills-grid .skill-3 {
+    text-align: center;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  #skills .skills-grid .skill-4 {
+    text-align: center;
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  #skills .skills-grid .skill-5 {
+    text-align: center;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  #skills .skills-grid .skill-6 {
+    text-align: center;
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  div.card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100vh;
+    top: auto;
+    height: auto;
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 /*
@@ -462,6 +588,59 @@ ul.card__social-buttons li a {
   }
 }
 
+@media only screen and (max-width: 1080px) {
+  #timelines {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 4;
+    grid-row: 4;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: 100vh 100vh;
+        grid-template-rows: 100vh 100vh;
+  }
+  #timelines #experience {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  #timelines #education {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  #timelines .btn-timeline--pulse {
+    -webkit-animation: pulse 1s infinite ease-out;
+            animation: pulse 1s infinite ease-out;
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-box-shadow: 0 0 0 0 #212121, 0 0 0 0 white;
+            box-shadow: 0 0 0 0 #212121, 0 0 0 0 white;
+  }
+  to {
+    -webkit-box-shadow: 0 0 0 6px #212121, 0 0 0 8px rgba(133, 133, 133, 0.5);
+            box-shadow: 0 0 0 6px #212121, 0 0 0 8px rgba(133, 133, 133, 0.5);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-box-shadow: 0 0 0 0 #212121, 0 0 0 0 white;
+            box-shadow: 0 0 0 0 #212121, 0 0 0 0 white;
+  }
+  to {
+    -webkit-box-shadow: 0 0 0 6px #212121, 0 0 0 8px rgba(133, 133, 133, 0.5);
+            box-shadow: 0 0 0 6px #212121, 0 0 0 8px rgba(133, 133, 133, 0.5);
+  }
+}
+
 /*
 ##########################################
    BUTTON TIMELINE ROTATE ON HOVER
@@ -675,9 +854,9 @@ ul.card__social-buttons li a {
 }
 
 /*
-=======================    
+=======================
     HELPER CLASSES
-=======================    
+=======================
 */
 .text--centered {
   text-align: center;
@@ -728,28 +907,6 @@ ul.card__social-buttons li a {
   padding-bottom: 28px;
 }
 
-@-webkit-keyframes pulse {
-  from {
-    -webkit-box-shadow: 0 0 0 0 #212121, 0 0 0 0 white;
-            box-shadow: 0 0 0 0 #212121, 0 0 0 0 white;
-  }
-  to {
-    -webkit-box-shadow: 0 0 0 6px #212121, 0 0 0 8px rgba(133, 133, 133, 0.5);
-            box-shadow: 0 0 0 6px #212121, 0 0 0 8px rgba(133, 133, 133, 0.5);
-  }
-}
-
-@keyframes pulse {
-  from {
-    -webkit-box-shadow: 0 0 0 0 #212121, 0 0 0 0 white;
-            box-shadow: 0 0 0 0 #212121, 0 0 0 0 white;
-  }
-  to {
-    -webkit-box-shadow: 0 0 0 6px #212121, 0 0 0 8px rgba(133, 133, 133, 0.5);
-            box-shadow: 0 0 0 6px #212121, 0 0 0 8px rgba(133, 133, 133, 0.5);
-  }
-}
-
 html, body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
@@ -763,125 +920,8 @@ html, body {
     display: grid;
     -ms-grid-columns: auto 90% auto;
         grid-template-columns: auto 90% auto;
-    -ms-grid-rows: 100vh 120vh 300vh 200vh;
-        grid-template-rows: 100vh 120vh 300vh 200vh;
-  }
-  #welcome {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1 / span 3;
-    -ms-grid-row: 1;
-    grid-row: 1;
-  }
-  #introduction {
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-grid-row: 2;
-    grid-row: 2;
-    position: static;
-  }
-  #skills {
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-grid-row: 3;
-    grid-row: 3;
-    margin: 0;
-  }
-  #skills .skills-grid {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto 45% auto 45% auto;
-        grid-template-columns: auto 45% auto 45% auto;
-    -ms-grid-rows: (auto)[6];
-        grid-template-rows: repeat(6, auto);
-    grid-row-gap: 2.2rem;
-  }
-  #skills .skills-grid .skill-1 {
-    text-align: center;
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-grid-row: 1;
-    grid-row: 1;
-  }
-  #skills .skills-grid .skill-2 {
-    text-align: center;
-    -ms-grid-column: 4;
-    grid-column: 4;
-    -ms-grid-row: 1;
-    grid-row: 1;
-  }
-  #skills .skills-grid .skill-3 {
-    text-align: center;
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-grid-row: 2;
-    grid-row: 2;
-  }
-  #skills .skills-grid .skill-4 {
-    text-align: center;
-    -ms-grid-column: 4;
-    grid-column: 4;
-    -ms-grid-row: 2;
-    grid-row: 2;
-  }
-  #skills .skills-grid .skill-5 {
-    text-align: center;
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-grid-row: 3;
-    grid-row: 3;
-  }
-  #skills .skills-grid .skill-6 {
-    text-align: center;
-    -ms-grid-column: 4;
-    grid-column: 4;
-    -ms-grid-row: 3;
-    grid-row: 3;
-  }
-  #timelines {
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-grid-row: 4;
-    grid-row: 4;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: 100vh 100vh;
-        grid-template-rows: 100vh 100vh;
-  }
-  #timelines #experience {
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 1;
-    grid-row: 1;
-  }
-  #timelines #education {
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 2;
-    grid-row: 2;
-  }
-  #timelines .btn-timeline--pulse {
-    -webkit-animation: pulse 1s infinite ease-out;
-            animation: pulse 1s infinite ease-out;
-  }
-  div.card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    min-height: 100vh;
-    top: auto;
-    height: auto;
-    -webkit-transform: none;
-            transform: none;
+    -ms-grid-rows: 100vh 120vh 175vh 200vh;
+        grid-template-rows: 100vh 120vh 175vh 200vh;
   }
 }
 
@@ -903,33 +943,5 @@ html, body {
   padding: 1.5rem;
   background-color: rgba(64, 77, 78, 0.5);
   border-radius: 1rem;
-}
-
-.info-icon {
-  font-size: 1.5rem;
-}
-
-.btn-github:hover {
-  color: #da621d;
-  font-size: 1.75rem;
-  padding: .375rem .9rem;
-}
-
-.btn-linkedin:hover {
-  color: #0077b5;
-  font-size: 1.75rem;
-  padding: .375rem .9rem;
-}
-
-.btn-twitter:hover {
-  color: #1da1f2;
-  font-size: 1.75rem;
-  padding: .375rem .9rem;
-}
-
-.btn-blogger:hover {
-  color: #f57d00;
-  font-size: 1.75rem;
-  padding: .375rem .9rem;
 }
 /*# sourceMappingURL=main.css.map */

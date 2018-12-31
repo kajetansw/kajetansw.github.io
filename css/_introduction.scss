@@ -1,3 +1,5 @@
+@import 'variables';
+
 #introduction {
     position: sticky;
     top: 0;
@@ -17,6 +19,30 @@
     }
 }
 
+.info-icon {
+    font-size: 1.5rem;
+}
+.btn-github:hover {
+    color: #da621d;
+    font-size: 1.75rem;
+    padding: .375rem .9rem;
+}
+.btn-linkedin:hover {
+    color: #0077b5;
+    font-size: 1.75rem;
+    padding: .375rem .9rem;
+}
+.btn-twitter:hover {
+    color: #1da1f2;
+    font-size: 1.75rem;
+    padding: .375rem .9rem;
+}
+.btn-blogger:hover {
+    color: #f57d00;
+    font-size: 1.75rem;
+    padding: .375rem .9rem;
+}
+
 .introduction__stick-with-scroll--down {
     transform: translate3d(0, 100%, 0);
     transition: all 1000ms ease-in 0s;
@@ -27,6 +53,14 @@
     transition: all 1000ms ease-in 0s;
 }
 
+@media only screen and (max-width: $media-limit-lg) {
+    #introduction {
+        grid-column: 2;
+        grid-row: 2;
+        position: static;
+    }
+}
+
 
 /*
 ##########################################
@@ -34,7 +68,7 @@
 ##########################################
 */
 
-@keyframes introduction__from-left {
+@keyframes introduction__slide-from-left {
     from {
         left: -100%;
         opacity: 0.4;
@@ -46,7 +80,7 @@
 }
 
 .introduction__slide-from-left {
-    animation-name: introduction__from-left;
+    animation-name: introduction__slide-from-left;
     animation-duration: 2s;
     animation-timing-function: ease;
 }
