@@ -1,11 +1,12 @@
 function animateExperienceTimeline() {
-    const btnExperience = $('#experience .btn-timeline');
+    const btnExperience = $('#experience button');
     const timeline = $('#experience > .timeline');
     const timelineLeftContents = $('#experience div:nth-child(odd) > .content');
     const timelineRightContents = $(
         '#experience div:nth-child(even) > .content'
     );
 
+    btnExperience.removeClass('btn-timeline--pulse');
     timeline.removeClass('timeline--slide-out');
     for (let i = 0; i < timelineLeftContents.length; i++) {
         $(timelineLeftContents[i]).removeClass('timeline-content--from-right');
@@ -27,13 +28,14 @@ function animateExperienceTimeline() {
 }
 
 function animateEducationTimeline() {
-    const btnEducation = $('#education .btn-timeline');
+    const btnEducation = $('#education button');
     const timeline = $('#education > .timeline');
     const timelineLeftContents = $('#education div:nth-child(odd) > .content');
     const timelineRightContents = $(
         '#education div:nth-child(even) > .content'
     );
 
+    btnEducation.removeClass('btn-timeline--pulse');
     timeline.removeClass('timeline--slide-out');
     for (let i = 0; i < timelineLeftContents.length; i++) {
         $(timelineLeftContents[i]).removeClass('timeline-content--from-right');
