@@ -24,7 +24,7 @@ html, body {
 
 .scrollable {
     display: grid;
-    grid-template-columns: auto 30% auto 60% auto;
+    grid-template-columns: auto 25% auto 65% auto;
     grid-template-rows: 100vh 100vh;
 }
 
@@ -36,4 +36,13 @@ html, body {
     padding: 1.5rem;
     background-color: rgba(#404d4e, 0.5);
     border-radius: 1rem;
+}
+
+@media only screen and (max-width: $media-limit-lg) {
+    div.card {
+        min-height: 100vh;
+        top: auto;
+        height: auto;
+        transform: none;
+    }
 }

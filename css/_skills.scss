@@ -84,7 +84,6 @@ ul.card__social-buttons {
         margin: 0;
 
         .skills-grid {
-            flex: 1;
             display: grid;
             grid-template-columns: auto 45% auto 45% auto;
             grid-template-rows: repeat(6, auto);
@@ -102,15 +101,6 @@ ul.card__social-buttons {
                 }
             }
         }
-    }
-
-    div.card {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        top: auto;
-        height: auto;
-        transform: none;
     }
 }
 

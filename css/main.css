@@ -50,8 +50,9 @@ canvas {
 }
 
 #introduction h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-top: 0;
+  padding-top: 1.5rem;
 }
 
 #introduction h4 {
@@ -60,6 +61,12 @@ canvas {
 
 #introduction table {
   margin-top: 1rem;
+}
+
+#introduction img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .info-icon {
@@ -278,9 +285,6 @@ ul.card__social-buttons li a {
     margin: 0;
   }
   #skills .skills-grid {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto 45% auto 45% auto;
@@ -330,20 +334,6 @@ ul.card__social-buttons li a {
     grid-column: 4;
     -ms-grid-row: 3;
     grid-row: 3;
-  }
-  div.card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    min-height: 100vh;
-    top: auto;
-    height: auto;
-    -webkit-transform: none;
-            transform: none;
   }
 }
 
@@ -928,8 +918,8 @@ html, body {
 .scrollable {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 30% auto 60% auto;
-      grid-template-columns: auto 30% auto 60% auto;
+  -ms-grid-columns: auto 25% auto 65% auto;
+      grid-template-columns: auto 25% auto 65% auto;
   -ms-grid-rows: 100vh 100vh;
       grid-template-rows: 100vh 100vh;
 }
@@ -943,5 +933,15 @@ html, body {
   padding: 1.5rem;
   background-color: rgba(64, 77, 78, 0.5);
   border-radius: 1rem;
+}
+
+@media only screen and (max-width: 1080px) {
+  div.card {
+    min-height: 100vh;
+    top: auto;
+    height: auto;
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

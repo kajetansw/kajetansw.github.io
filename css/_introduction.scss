@@ -8,14 +8,20 @@
     // background-color: lightblue;
 
     h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         margin-top: 0;
+        padding-top: 1.5rem;
     }
     h4 {
         font-size: 1.5rem;
     }
     table {
         margin-top: 1rem;
+    }
+    img {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
     }
 }
 
